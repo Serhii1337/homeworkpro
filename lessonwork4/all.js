@@ -17,16 +17,16 @@ if (firtsDigit === secondDigit) {
 
 
 
-let DistanseKm = parseInt(prompt(`Введіть першу відстань`));
-let DistanseFoot = parseInt(prompt(`Введіть другу відстань`));
+let distanseKm = parseInt(prompt(`Введіть першу відстань`));
+let distanseFoot = parseInt(prompt(`Введіть другу відстань`));
 
-DistanseKm = DistanseKm*1000;
-DistanseFoot = DistanseFoot*0.305;
+distanseKm = distanseKm*1000;
+distanseFoot = distanseFoot*0.305;
 
-if (DistanseKm > DistanseFoot) {
+if (distanseKm > distanseFoot) {
     console.log(`Друге число менше`)
 }
-if  (DistanseFoot > DistanseKm) {
+if  (distanseFoot > distanseKm) {
     console.log(`Перше число менше`)
 }
 
@@ -53,11 +53,11 @@ if (b > a) {
 
 
 
-let SomeDigit = parseInt(prompt(`Напишіть будь-яке число`));
+let someDigit = parseInt(prompt(`Напишіть будь-яке число`));
 
-SomeDigit = SomeDigit % 2;
+someDigit = someDigit % 2;
 
-if (SomeDigit === 0) {
+if (someDigit === 0) {
     console.log(`Число закінчується парною цифрою`)
 } else {
     console.log(`Число закінчується непарною цифрою`)
@@ -68,12 +68,12 @@ if (SomeDigit === 0) {
 
 
 
-let TwoDigitNumber = parseInt(prompt(`Напишіть будь-яке двухзначне число`));
+let twoDigitNumber = parseInt(prompt(`Напишіть будь-яке двухзначне число`));
 
-Digit1 = parseInt(TwoDigitNumber/10);
-Digit2 = parseInt(TwoDigitNumber%10);
+let digit1 = parseInt(twoDigitNumber/10);
+let digit2 = parseInt(twoDigitNumber%10);
 
-if (Digit1 > Digit2) {
+if (digit1 > digit2) {
     console.log(`Перша цифра більша за другу`)
 } else {
     console.log(`Друга цифра більша за першу`)
@@ -83,13 +83,13 @@ if (Digit1 > Digit2) {
 
 
 
-let ThreeDigitNumber = parseInt(prompt(`Напишіть будь-яке трьохзначне число`));
+let threeDigitNumber = parseInt(prompt(`Напишіть будь-яке трьохзначне число`));
 
-ThreeDigitNumber1 = parseInt(ThreeDigitNumber / 100);
-ThreeDigitNumber2 = parseInt(ThreeDigitNumber / 10) % 10;
-ThreeDigitNumber3 = (ThreeDigitNumber % 10);
+let threeDigitNumber1 = parseInt(threeDigitNumber / 100);
+let threeDigitNumber2 = parseInt(threeDigitNumber / 10) % 10;
+let threeDigitNumber3 = (threeDigitNumber % 10);
 
-if((ThreeDigitNumber1 + ThreeDigitNumber2 + ThreeDigitNumber3) % 2 === 0) {
+if((threeDigitNumber1 + threeDigitNumber2 + threeDigitNumber3) % 2 === 0) {
     console.log(`Сума цифр трьохзначного числа є парною`)
 } else {
     console.log(`Сума цифр трьохзначного числа є непарною`)
@@ -98,7 +98,7 @@ if((ThreeDigitNumber1 + ThreeDigitNumber2 + ThreeDigitNumber3) % 2 === 0) {
 
 
 
-if ((ThreeDigitNumber1 + ThreeDigitNumber2 + ThreeDigitNumber3) % 5 === 0) {
+if ((threeDigitNumber1 + threeDigitNumber2 + threeDigitNumber3) % 5 === 0) {
     console.log(`Сума чисел трьохзначного числа кратна 5`)
 } else {
     console.log(`Сума чисел трьохзначного числа не кратна 5`)
@@ -107,7 +107,7 @@ if ((ThreeDigitNumber1 + ThreeDigitNumber2 + ThreeDigitNumber3) % 5 === 0) {
 
 
 
-if ((ThreeDigitNumber1 * ThreeDigitNumber2 * ThreeDigitNumber3) > 100) {
+if ((threeDigitNumber1 * threeDigitNumber2 * threeDigitNumber3) > 100) {
     console.log(`Добуток цифр трьохзначного числа більше за 100`)
 } else {
     console.log(`Добуток цифр трьохзначного числа менше за 100`)
@@ -115,7 +115,7 @@ if ((ThreeDigitNumber1 * ThreeDigitNumber2 * ThreeDigitNumber3) > 100) {
 
 
 
-if (ThreeDigitNumber1 === ThreeDigitNumber2, ThreeDigitNumber1 === ThreeDigitNumber3, ThreeDigitNumber2 === ThreeDigitNumber3) {
+if (threeDigitNumber1 === threeDigitNumber2 && threeDigitNumber1 === threeDigitNumber3 && threeDigitNumber2 === threeDigitNumber3) {
     console.log(`Всі цифри однакові`)
 } else {
     console.log(`Цифри не є однаковими`)
@@ -124,11 +124,11 @@ if (ThreeDigitNumber1 === ThreeDigitNumber2, ThreeDigitNumber1 === ThreeDigitNum
 
 
 
-if (ThreeDigitNumber1 === ThreeDigitNumber2) {
+if (threeDigitNumber1 === threeDigitNumber2) {
     console.log(`Є однакові цифри`)
-} else if (ThreeDigitNumber1 === ThreeDigitNumber3) {
+} else if (threeDigitNumber1 === threeDigitNumber3) {
     console.log(`Є однакові цифри`)
-} else if (ThreeDigitNumber2 === ThreeDigitNumber3) {
+} else if (threeDigitNumber2 === threeDigitNumber3) {
     console.log(`Є однакові цифри`)
 } else {
     console.log(`Немає однакових цифр`)
@@ -138,26 +138,26 @@ if (ThreeDigitNumber1 === ThreeDigitNumber2) {
 
 
 
-let SixDigitNumber = parseInt(prompt(`Введіть шестизначне число`));
+let sixDigitNumber = parseInt(prompt(`Введіть шестизначне число`));
 
-let SixDigitNumber1 = SixDigitNumber - (SixDigitNumber % 100000);
-SixDigitNumber1 = SixDigitNumber1 / 100000;
+let sixDigitNumber1 = sixDigitNumber - (sixDigitNumber % 100000);
+sixDigitNumber1 = sixDigitNumber1 / 100000;
 
-let SixDigitNumber2 = (SixDigitNumber % 100000) - (SixDigitNumber % 10000);
-SixDigitNumber2 = SixDigitNumber2 / 10000;
+let sixDigitNumber2 = (sixDigitNumber % 100000) - (sixDigitNumber % 10000);
+sixDigitNumber2 = sixDigitNumber2 / 10000;
 
-let SixDigitNumber3 = (SixDigitNumber % 10000) - (SixDigitNumber % 1000);
-SixDigitNumber3 = SixDigitNumber3 / 1000;
+let sixDigitNumber3 = (sixDigitNumber % 10000) - (sixDigitNumber % 1000);
+sixDigitNumber3 = sixDigitNumber3 / 1000;
 
-let SixDigitNumber4 = (SixDigitNumber % 1000) - (SixDigitNumber % 100);
-SixDigitNumber4 = SixDigitNumber4 / 100;
+let sixDigitNumber4 = (sixDigitNumber % 1000) - (sixDigitNumber % 100);
+sixDigitNumber4 = sixDigitNumber4 / 100;
 
-let SixDigitNumber5 = (SixDigitNumber % 100) - (SixDigitNumber % 10);
-SixDigitNumber5 = SixDigitNumber5 / 10;
+let sixDigitNumber5 = (sixDigitNumber % 100) - (sixDigitNumber % 10);
+sixDigitNumber5 = sixDigitNumber5 / 10;
 
-let SixDigitNumber6 = SixDigitNumber % 10;
+let sixDigitNumber6 = sixDigitNumber % 10;
 
-if (SixDigitNumber1 === SixDigitNumber6, SixDigitNumber2 === SixDigitNumber5, SixDigitNumber3 === SixDigitNumber4) {
+if (sixDigitNumber1 === sixDigitNumber6, sixDigitNumber2 === sixDigitNumber5, sixDigitNumber3 === sixDigitNumber4) {
     console.log(`Дане число є дзеркальним`)
 } else {
     console.log(`Дане число не э дзеркальним`)

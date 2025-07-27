@@ -1,21 +1,21 @@
-let ThreeDigitNumber = parseInt(prompt(`Напишіть будь-яке трьохзначне число`));
+let threeDigitNumber = parseInt(prompt(`Напишіть будь-яке трьохзначне число`));
 
-ThreeDigitNumber1 = parseInt(ThreeDigitNumber / 100);
-ThreeDigitNumber2 = parseInt(ThreeDigitNumber / 10) % 10;
-ThreeDigitNumber3 = (ThreeDigitNumber % 10);
+threeDigitNumber1 = parseInt(threeDigitNumber / 100);
+threeDigitNumber2 = parseInt(threeDigitNumber / 10) % 10;
+threeDigitNumber3 = (threeDigitNumber % 10);
 
-if (ThreeDigitNumber1 === ThreeDigitNumber2, ThreeDigitNumber1 === ThreeDigitNumber3, ThreeDigitNumber2 === ThreeDigitNumber3) {
+if (threeDigitNumber1 === threeDigitNumber2 && threeDigitNumber1 === threeDigitNumber3 && threeDigitNumber2 === threeDigitNumber3) {
     console.log(`Всі цифри однакові`)
 } else {
     console.log(`Цифри не є однаковими`)
 }
 
 
-if (ThreeDigitNumber1 === ThreeDigitNumber2) {
+if (threeDigitNumber1 === threeDigitNumber2) {
     console.log(`Є однакові цифри`)
-} else if (ThreeDigitNumber1 === ThreeDigitNumber3) {
+} else if (threeDigitNumber1 === threeDigitNumber3) {
     console.log(`Є однакові цифри`)
-} else if (ThreeDigitNumber2 === ThreeDigitNumber3) {
+} else if (threeDigitNumber2 === threeDigitNumber3) {
     console.log(`Є однакові цифри`)
 } else {
     console.log(`Немає однакових цифр`)
