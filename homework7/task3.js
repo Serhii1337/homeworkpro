@@ -1,17 +1,13 @@
 function askNumber() {
 
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i < 10; i++) {
 
-        let num = parseInt(prompt("Введіть число більше 100:"));
+        let num = prompt("Введіть число більше 100:");
 
-        if (num === null) {
-            return alert("Введення скасовано.");
-        }
-
-        if (num > 100) {
+        if (num > 100 || isNaN(num) || i === 9  ) {
             console.log("Останнє введене значення:", num);
             break;
-        } else {
+        } else if (num <= 100) {
             alert("Число введено неправильно! Спробуйте ще раз.");
         }
     }
