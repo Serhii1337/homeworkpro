@@ -7,11 +7,11 @@ const contactsBook = {
     ],
     
     findContact(name) {
-        return contactsBook.contacts.find(contact => contact.name.toLowerCase(  ) === name.toLowerCase()) || `Контант не знайдено`
+        return this.contacts.find(contact => contact.name.toLowerCase(  ) === name.toLowerCase()) || `Контант не знайдено`
     },
     
     addContact(name, tel, mail) {
-        contactsBook.contacts.push({name, tel, mail})
+        this.contacts.push({name, tel, mail})
         return `Contact ${name} added`
     },
 }
