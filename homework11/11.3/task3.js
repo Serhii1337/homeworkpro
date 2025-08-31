@@ -1,0 +1,1 @@
+document.getElementById(`randomImage`).src =`img/` + Math.floor(Math.random() * 9 + 1) + `.jpg`;
