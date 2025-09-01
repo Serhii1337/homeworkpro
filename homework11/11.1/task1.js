@@ -1,19 +1,21 @@
-const container = document.getElementById(`multiplicationTable`);
-let result = ``;
+const container = document.querySelector(`.multiplicationTable`);
+let result = `<table>`;
 
 for (let i = 0; i <= 10; i++) {
-    
-    for (let j = 0; j <= 10; j++) {
-    
+    result += `<tr>`;
+    for (let j = 0; j <= 10; j++) 
+        
         if (i === 0) {
-            result += j + ` `;
+            result += `<td><b>${j}<b></td>`;
         } else if (j === 0) {
-            result += i + ` `;
+            result += `<td><b>${i}<b></td>`;
         } else {
-            result += (i * j) + ` `;
+            result += `<td>${i * j}</td>`;
         }
     }
-    result += `<br>`;
-}
+    result += `</tr>`;
+
+
+result += `</table>`;
 
 container.innerHTML = result;
