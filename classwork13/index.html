@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="signin">
+        <p>Name: <input type="text" name="name" class="name" placeholder="Enter your name"></p>
+        <p>Surname: <input type="text" name="surname" class="surname" placeholder="Enter your surname"></p>
+        <p>Birthdate: <input type="text" name="birthDate" class="birth-date" placeholder="Enter your birthdate"></p>
+
+        <h2>Gender:
+            <p><input type="radio" name="gender" value="M"> Male</p>
+            <p><input type="radio" name="gender" value="F"> Female</p>
+        </h2>
+
+        <h2>City:
+            <select name="city">
+                <option value="PL">Poltava</option>
+                <option value="ODS">Odessa</option>
+                <option value="KV">Kyiv</option>
+                <option value="SM">Symu</option>
+            </select>
+        </h2>
+
+        <h2>Adress:
+            <textarea name="address"></textarea>
+        </h2>
+
+        <h2>Language: 
+            <p><input type="checkbox" name="lang" value="en">English</p>
+            <p><input type="checkbox" name="lang" value="ua">Ukrainian</p>
+            <p><input type="checkbox" name="lang" value="fr">French</p>
+            <p><input type="checkbox" name="lang" value="ge">German</p>
+        </h2>
+
+        <button type="button">Save</button>
+    </form>
+
+    <div class="table"></div>
+
+
+
+    <script src="all.js"></script>
+</body>
+</html>

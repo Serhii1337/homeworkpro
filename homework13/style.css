@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.wrapper > div {
+    border: 1px solid black;
+    width: 33.3%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: block;
+    width: fit-content;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
