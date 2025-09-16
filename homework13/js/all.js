@@ -117,11 +117,26 @@ function renderOrderForm(product) {
             return;
         }
 
+        const orders = JSON.parse(localStorage.getItem('orders')) || [];
+        const newOrder = {
+            date: new Date().toLocaleDateString(),
+            product: product.name,
+            price: product.price,
+            quantity,
+            fullname,
+            city,
+            warehouse,
+            payment,
+            comment
+        };
+        orders.push(newOrder);
+        localStorage.setItem('orders', JSON.stringify(orders));
+
         formBox.innerHTML = `
-            <h3>Ваше замовлення підтвердженно</h3>
+            <h3>Ваше замовлення підтверджено</h3>
             <p><b>Товар:</b> ${product.name}</p>
             <p><b>Кількість:</b> ${quantity}</p>
-            <p><b>Сума:</b> $${product.price}</p>
+            <p><b>Сума:</b> $${product.price * quantity}</p>
             <hr>
             <p><b>ПІБ:</b> ${fullname}</p>
             <p><b>Місто:</b> ${city}</p>
@@ -132,4 +147,54 @@ function renderOrderForm(product) {
     });
 }
 
+function showOrders() {
+    const wrapper = document.querySelector('.wrapper');
+    wrapper.innerHTML = '';
+
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+    if (orders.length === 0) {
+        wrapper.innerHTML = '<p>Замовлень немає</p>';
+    } else {
+        orders.forEach((order, index) => {
+            const orderBox = document.createElement('div');
+
+            orderBox.innerHTML = `
+                <p><b>Дата:</b> ${order.date}</p>
+                <p><b>Товар:</b> ${order.product}</p>
+                <p><b>Кількість:</b> ${order.quantity}</p>
+                <p><b>Сума:</b> $${order.price * order.quantity}</p>
+                <button class="deleteOrderBtn">Видалити</button>
+            `;
+
+            const deleteBtn = orderBox.querySelector('.deleteOrderBtn');
+            deleteBtn.addEventListener('click', () => {
+                orders.splice(index, 1);
+                localStorage.setItem('orders', JSON.stringify(orders));
+                orderBox.remove();
+
+                if (orders.length === 0) {
+                    wrapper.innerHTML = '<p>Замовлень немає</p>';
+                    wrapper.appendChild(backBtn);
+                }
+            });
+
+            wrapper.appendChild(orderBox);
+        });
+    }
+
+    const backBtn = document.createElement('button');
+    backBtn.textContent = 'Повернутися';
+    backBtn.addEventListener('click', () => {
+        wrapper.innerHTML = `
+            <div class="categories"></div>
+            <div class="products"></div>
+            <div class="info"></div>
+        `;
+        showCategories();
+    });
+    wrapper.appendChild(backBtn);
+}
+
 showCategories();
+document.querySelector('.my-orders').addEventListener('click', showOrders);
