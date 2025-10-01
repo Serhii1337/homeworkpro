@@ -17,6 +17,7 @@ for (let i = 0; i < photos.length; i++) {
     dot.addEventListener("click", () => {
         currentSlide = i;
         showSlide(currentSlide);
+        resetInterval();
     });
 
     dotsContainer.appendChild(dot);
@@ -35,12 +36,27 @@ prevButton.addEventListener("click", () => {
     currentSlide--;
     if (currentSlide < 0) currentSlide = photos.length - 1;
     showSlide(currentSlide);
+    resetInterval();
 });
 
 nextButton.addEventListener("click", () => {
     currentSlide++;
     if (currentSlide >= photos.length) currentSlide = 0;
     showSlide(currentSlide);
+    resetInterval();
 });
+
+let slideInterval = setInterval(nextSlide, 3000);
+
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= photos.length) currentSlide = 0;
+    showSlide(currentSlide);
+}
+
+function resetInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 3000);
+}
 
 showSlide(currentSlide);
